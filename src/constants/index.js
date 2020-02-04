@@ -1,0 +1,1 @@
+export const SAVE_PROJECTS_KEY = "SAVE_PROJECTS";

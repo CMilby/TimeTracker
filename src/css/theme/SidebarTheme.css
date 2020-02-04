@@ -1,0 +1,10 @@
+.sidebar-entry-dark {
+}
+
+.sidebar-entry-dark:hover {
+	background-color: #797979;
+}
+
+.selected-dark {
+	background-color: #555555;
+}

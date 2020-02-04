@@ -1,26 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 
-const App = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Sidebar from "./components/Sidebar";
+
+import { Routes } from "./components/Routes";
+import { Project } from "./objects";
+
+import "./css/App.css";
+import "./css/theme/AppTheme.css";
+
+interface IAppProps {}
+
+interface IAppState {
+	projects: Project[];
+
+	theme: string;
 }
 
-export default App;
+export default class App extends Component<IAppProps, IAppState> {
+	constructor(props: any) {
+		super(props);
+
+		this.state = {
+			projects: [
+				{
+					id: 0,
+					title: "Project 1"
+				},
+				{
+					id: 1,
+					title: "Project 2"
+				}
+			],
+			theme: "dark"
+		};
+	}
+
+	render() {
+		return (
+			<div>
+				<Router>
+					<div
+						className={`sidebar-root sidebar-root-${this.state.theme}`}
+					>
+						<Sidebar theme={this.state.theme} />
+					</div>
+					<div
+						className={`main-area-root main-area-root-${this.state.theme}`}
+					>
+						<Routes />
+					</div>
+				</Router>
+			</div>
+		);
+	}
+}
