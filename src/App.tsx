@@ -40,15 +40,17 @@ export default class App extends Component<IAppProps, IAppState> {
 		return (
 			<div>
 				<Router>
-					<div
-						className={`sidebar-root sidebar-root-${this.state.theme}`}
-					>
-						<Sidebar theme={this.state.theme} />
-					</div>
-					<div
-						className={`main-area-root main-area-root-${this.state.theme}`}
-					>
-						<Routes />
+					<div className="app-root">
+						<div
+							className={`sidebar-root sidebar-root-${this.state.theme}`}
+						>
+							<Sidebar theme={this.state.theme} />
+						</div>
+						<div
+							className={`main-area-root main-area-root-${this.state.theme}`}
+						>
+							<Routes theme={this.state.theme} />
+						</div>
 					</div>
 				</Router>
 			</div>

@@ -1,0 +1,9 @@
+.dashboard-root-dark {
+	color: #d6d6d6;
+}
+
+.task-input-dark {
+	background-color: red;
+	border: 2px solid green;
+	border-radius: 10px;
+}

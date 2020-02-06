@@ -6,19 +6,25 @@ import ProjectComponent from "./ProjectComponent";
 import TimeTrackerComponent from "./TimeTrackerComponent";
 import ReportingComponent from "./ReportingComponent";
 
-export const Routes = ({}) => (
-	<Switch>
-		<Route exact path="/">
-			<DashboardComponent />
-		</Route>
-		<Route path="/projects">
-			<ProjectComponent />
-		</Route>
-		<Route path="/time">
-			<TimeTrackerComponent />
-		</Route>
-		<Route path="/reporting">
-			<ReportingComponent />
-		</Route>
-	</Switch>
+type RouteProps = {
+	theme: string;
+};
+
+export const Routes = ({ theme }: RouteProps) => (
+	<div className="routes-root">
+		<Switch>
+			<Route exact path="/">
+				<DashboardComponent theme={theme} />
+			</Route>
+			<Route path="/projects">
+				<ProjectComponent />
+			</Route>
+			<Route path="/time">
+				<TimeTrackerComponent />
+			</Route>
+			<Route path="/reporting">
+				<ReportingComponent />
+			</Route>
+		</Switch>
+	</div>
 );

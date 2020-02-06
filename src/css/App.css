@@ -1,3 +1,7 @@
+.app-root {
+	display: flex;
+}
+
 .sidebar-root {
 	float: left;
 	min-width: 150px;
@@ -7,6 +11,7 @@
 
 .main-area-root {
 	height: 100vh;
+	width: 100%;
 }
 
 .noselect {
