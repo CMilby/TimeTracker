@@ -3,7 +3,32 @@
 }
 
 .task-input-dark {
-	background-color: red;
-	border: 2px solid green;
-	border-radius: 10px;
+	background-color: #3e3e3e;
+	border: 2px solid #616161;
+}
+
+.task-input-input-dark {
+	background-color: #3e3e3e;
+	color: #d6d6d6;
+}
+
+.task-input-button-dark {
+	background-color: #4b4b4b;
+	border: 2px solid #616161;
+	color: #d6d6d6;
+	outline-color: #d6d6d6;
+}
+
+.task-component-root-dark {
+	background-color: #3e3e3e;
+	border: 2px solid #616161;
+}
+
+.task-component-header-dark {
+	border-bottom: 2px solid #616161;
+}
+
+.task-component-item-dark {
+	background-color: #4b4b4b;
+	border: 2px solid #616161;
 }

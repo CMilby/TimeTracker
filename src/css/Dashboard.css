@@ -1,16 +1,40 @@
 .dashboard-root {
+	font-size: 16px;
 }
 
 .task-input {
 	margin: 5px;
 	padding: 10px;
+	border-radius: 10px;
 }
 
-.task-list-header {
+.task-input-input {
+	font-size: 25px;
+	width: 50%;
+	outline: none;
+	border: none;
 }
 
-.task-list-body {
+.task-input-elapsed-time {
+	float: right;
+	font-size: 25px;
+	padding-right: 5px;
 }
 
-.task-list-item {
+.task-input-button {
+	float: right;
+	font-size: 25px;
+}
+
+.task-component-root {
+	margin: 5px;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.task-component-item {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 10px;
+	border-radius: 10px;
 }
